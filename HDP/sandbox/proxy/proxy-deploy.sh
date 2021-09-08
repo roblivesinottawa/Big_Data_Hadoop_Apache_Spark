@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 docker rm -f sandbox-proxy 2>/dev/null
 docker run --name sandbox-proxy --network=cda \
--v /Users/robsontrajano/Desktop/programming/september_2021/Big_Data_Hadoop_Apache_Spark/HDP/assets/nginx.conf:/etc/nginx/nginx.conf \
--v /Users/robsontrajano/Desktop/programming/september_2021/Big_Data_Hadoop_Apache_Spark/HDP/sandbox/proxy/conf.d:/etc/nginx/conf.d \
--v /Users/robsontrajano/Desktop/programming/september_2021/Big_Data_Hadoop_Apache_Spark/HDP/sandbox/proxy/conf.stream.d:/etc/nginx/conf.stream.d \
+-v /Users/macbookpro/Documents/GitHub/Big_Data_Hadoop_Apache_Spark/HDP/assets/nginx.conf:/etc/nginx/nginx.conf \
+-v /Users/macbookpro/Documents/GitHub/Big_Data_Hadoop_Apache_Spark/HDP/sandbox/proxy/conf.d:/etc/nginx/conf.d \
+-v /Users/macbookpro/Documents/GitHub/Big_Data_Hadoop_Apache_Spark/HDP/sandbox/proxy/conf.stream.d:/etc/nginx/conf.stream.d \
 -p 1080:1080 \
 -p 4200:4200 \
 -p 7777:7777 \
@@ -96,4 +96,4 @@ docker run --name sandbox-proxy --network=cda \
 -p 50095:50095 \
 -p 60000:60000 \
 -p 60080:60080 \
--d hortonworks/sandbox-proxy:
+-d hortonworks/sandbox-proxy:1.0
